@@ -13,7 +13,7 @@ Este repositorio contiene un script de Python que realiza web scraping en el sit
 	1.  Request: Para realizar peticiones.
 	2.  Lxml: Para manipular el documento html y utilizar Xpath
 	
-- Actualizar pip si este lo sugiere también es una buena práctica:
+- Actualizar pip si este lo sugiere, también es una buena práctica:
 ```bash
 	python.exe -m pip install --upgrade pip
 ```
