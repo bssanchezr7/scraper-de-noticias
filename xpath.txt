@@ -1,2 +1,0 @@
-links = //h2/a/@href
-titulo = //h2[not(@class)]/span/text()
