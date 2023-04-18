@@ -23,6 +23,10 @@ Este repositorio contiene un script de Python que realiza web scraping en el sit
 ```
 '//h2/a[contains(@class, "Sect")]/@href'
 ```
+>[!note] Nota 
+>Por alguna razón que la librería `requests` cambia los nodos `h2` por `text-fill`. Solamente pasa a la hora de obtener los links.
+>Por eso en el código se coloca `text-fill` en lugar de `h2`.
+
 En el navegador:
 ```
 $x('//h2/a[contains(@class, "Sect")]/@href').map(x => x.value)
@@ -56,9 +60,9 @@ Con este Xpath se obtienen los nodos 'p' dentro del body.
 ### parse_notice(link, today)
 Función que realiza el scraping de un artículo de noticias y guarda la información en un archivo de texto.
     
-    Args:
-        link (str): Link al artículo de noticias.
-        today (str): Fecha actual en formato dd-mm-yy.
+   Args:
+        - link (str): Link al artículo de noticias.
+        - today (str): Fecha actual en formato dd-mm-yy.
         
 ### parse_home()
 Función que realiza el scraping de la página principal de La República y llama a la función parse_notice para cada artículo de noticias encontrado.
